@@ -1,0 +1,137 @@
+/***************
+# Task 1
+
+Create a function that takes a number as input and returns the factorial of the number.
+***************/
+
+import 'dart:io';
+int fact(int num)
+{
+int result = 1 ;
+for(int i=1 ;i<=num;i++)
+{
+  result *= i ;
+}
+return result ;
+}
+void main() 
+{
+print("Enter a number: ");
+  String input = stdin.readLineSync()!;
+  int num = int.parse(input);
+  int result = fact(num) ;
+  print(result) ;
+
+}
+/***************
+# Task 2
+
+Create a function that takes a number as input and check if this number prime or not.
+***************/
+
+import 'dart:io';
+bool prime(int num) {
+  if (num <= 1) {
+    return false;
+  }
+  for (int i = 2; i <= num / 2; i++) {
+    if (num % i == 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+void main() 
+{
+  print('enter num to check') ;
+  String input = stdin.readLineSync()! ;
+  int num = int.parse(input);
+  if (prime(num))
+   {
+    print('$num is a prime number.');
+  } else {
+    print('$num is not a prime number.');
+  }
+}
+
+
+/***************
+# Task 3
+
+Create a function that takes a number as input and return string `odd` or `even` after check if this number odd or even.
+***************/
+
+import 'dart:io';
+bool evenodd(int num)
+ {
+
+    if (num % 2 == 0) 
+  {
+      return true;
+    
+   }
+  return false;
+}
+
+void main() 
+{
+  print('enter num to check') ;
+  String input = stdin.readLineSync()! ;
+  int num = int.parse(input);
+  if (evenodd(num))
+   {
+    print('$num is  even number.');
+  } else {
+    print('$num is odd number.');
+  }
+}
+
+
+/***************
+# Task 4
+
+Create a function that takes a number as a guess, Generate a random number between 1 and 100. then tell us whether our guessed low, high, or exactly right.
+
+Ex: 
+  input: 20 `my guess`
+  output: low `random 70 > my guess 20`
+***************/
+
+// remove this comment and write your code here!!!!
+
+
+/***************
+# Task 5
+
+Implement a function that takes as input three variables, and returns the largest of the three. 
+
+import 'dart:io';
+int maxi(int a ,int b , int c)
+{
+  int largest = a;
+
+  if (b > largest) {
+    largest = b;
+  }
+
+  if (c > largest) {
+    largest = c;
+  }
+
+  return largest;
+}
+void main ()
+{
+  print('enter 3 num to check the max') ;
+  String input1 = stdin.readLineSync()! ;
+  String input2 = stdin.readLineSync()! ;
+  String input3 = stdin.readLineSync()! ;
+  int num1 = int.parse(input1) ;
+  int num2 = int.parse(input2) ;
+  int num3 = int.parse(input3) ;
+int max =maxi(num1 , num2 , num3) ;
+print('tme max of $num1,$num2,$num3    is      $max' ) ;
+
+
+}

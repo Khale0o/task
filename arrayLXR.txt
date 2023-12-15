@@ -1,0 +1,23 @@
+List<bool> res(List<int> numbers, int left, int right) {
+  List<bool> result = [];
+
+  for (int i = 0; i < numbers.length; ++i) {
+    int x = numbers[i] ~/ (i + 1); 
+    if (numbers[i] == (i + 1) * x && x >= left && x <= right) {
+      result.add(true);
+    } else {
+      result.add(false);
+    }
+  }
+
+  return result;
+}
+
+void main() {
+  List<int> numbers = [2, 5, 10, 6];
+  int left = 2, right = 5;
+
+  List<bool> result = res(numbers, left, right);
+
+  print(": $result");
+}
